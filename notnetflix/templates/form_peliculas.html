@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block bodyPage %}
+<h1>{{title_h1}}</h1>
+
+<form method="POST"> {% csrf_token %}
+    <div class="mb-3">
+        <label for="title-input" class="form-label" >Título</label>
+        <input type="text" class="form-control" id="title-input " name="titulo" required>
+    </div>
+    <div class="mb-3">
+        <label for="order-input" class="form-label" >Orden</label>
+        <input type="number" class="form-control" id="order-input" name="orden" required>
+    </div>
+    <div class="mb-3">
+        <label for="description-input" class="form-label"  >Descripción</label>
+        <input type="text" class="form-control" id="description-input" name="descripcion" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a href="{% url 'peliculas' %}" class="btn btn-danger">Cancelar</a>
+</form>
+
+{% endblock %}
+
+{% block sideBar %}
+    {% include 'peliculas_añadir.html' %}
+{% endblock %}

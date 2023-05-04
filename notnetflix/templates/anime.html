@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block bodyPage %}
+<h1>Animes</h1>
+
+<form action="." method="GET">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="search-input" class="form-label">Buscador</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" class="form-control" id="search-input" name="search">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </div>
+</form>
+{% if anime %}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Título</th>
+            <th scope="col">Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for animes in anime %}
+        <tr>
+            <th scope="row">{{animes.orden}}</th>
+            <td>{{animes.titulo}}</td>
+            <td> {{animes.descripcion}} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+    <p>No hay animes para mostrar</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block sideBar %}
+{% include 'anime_añadir.html' %}
+{% endblock %}

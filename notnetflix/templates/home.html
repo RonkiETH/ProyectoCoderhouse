@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block bodyPage %}
+<h1>Home</h1>
+<a href="{% url 'peliculas' %}" class="btn btn-success">Buscador de Películas</a>
+<a href="{% url 'series' %}" class="btn btn-success">Buscador de Series</a>
+<a href="{% url 'anime' %}" class="btn btn-success">Buscador de Anime</a>
+
+{% endblock %}

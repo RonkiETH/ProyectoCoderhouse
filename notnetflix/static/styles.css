@@ -1,0 +1,25 @@
+html,
+body {
+    height: 100%;
+}
+.active {
+    font-weight: bolder;
+    color: crimson !important;
+}
+
+.container {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.sidebar {
+    min-width: 250px;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
