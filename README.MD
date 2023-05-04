@@ -27,6 +27,27 @@ Seleccionar Interprete
 pip install django
 ```
 
+**Instalá Dotenv**
+```bash
+pip install python-dotenv
+```
+
+**Configura tu SECRET_KEY**
+```bash
+En manage.py vas a agregar este código:
+from dotenv import load_dotenv
+load_dotenv()
+
+Creá un archivo .env 
+En el archivo .env vas a agregar lo siguiente:
+SECRET_KEY = 'TU_CLAVE'
+
+En el archivo settings.py:
+import OS
+Y en el valor de SECRET_KEY vas a poner lo siguiente:
+SECRET_KEY = os.environ.get('SECRET_KEY')
+```
+
 **Iniciá el proyecto**
 ```bash
 python manage.py runserver
@@ -42,5 +63,6 @@ python manage.py runserver
 ```bash
 python manage.py createsuperuser
 ``` 
+
 
 
