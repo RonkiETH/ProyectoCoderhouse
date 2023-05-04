@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'star_wars_project.urls'
+ROOT_URLCONF = 'not_netflix_project.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'star_wars_project.wsgi.application'
+WSGI_APPLICATION = 'not_netflix_project.wsgi.application'
 
 
 # Database
