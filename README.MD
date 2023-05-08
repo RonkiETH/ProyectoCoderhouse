@@ -1,11 +1,6 @@
 
 # Proyecto Python Coderhouse
 
-
-
-
-
-
 ## Deploy
 
 Para iniciar este proyecto:
@@ -47,14 +42,15 @@ import OS
 Y en el valor de SECRET_KEY vas a poner lo siguiente:
 SECRET_KEY = os.environ.get('SECRET_KEY')
 ```
+**Realiza las migraciones necesarias**
+```bash
+python manage.py migrate
+```
 
 **Iniciá el proyecto**
 ```bash
 python manage.py runserver
 ```
-
-
-
 
 ## Adicional
 **Creá un superusuario (Para ver la consola de admnistrador)**
@@ -63,6 +59,3 @@ python manage.py runserver
 ```bash
 python manage.py createsuperuser
 ``` 
-
-
-
